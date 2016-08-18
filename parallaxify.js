@@ -1,34 +1,30 @@
 // Created by Ali Torbati
 // ali.torbati@gmail.com
-// 2015
+// 2016
+// Version 2.0
 
-(function ($) {
+var parallaxify = function(element) {
+  var element = document.querySelectorAll(element)[0],
+      elementOffsetTop = element.offsetTop,
+      elementHeight = element.offsetHeight;
 
-  $.fn.parallaxify = function() {
+  function percentageSeen () {
+    var viewportHeight = window.innerHeight,
+        winScrollTop = window.scrollY;
 
-    return this.each(function() {
-      var $element = $(this);
+    var distance = (winScrollTop + viewportHeight) - elementOffsetTop;
+    var percentage = distance / ((viewportHeight + elementHeight) / 100);
 
-      function percentageSeen () {
-        var viewportHeight = $(window).height(),
-            winScrollTop = $(window).scrollTop(),
-            elementOffsetTop = $element.offset().top,
-            elementHeight = $element.height();
+    if (percentage < 0) return 0;
+    else if (percentage > 100) return 100;
+    else return percentage;
+  }
 
-        var distance = (winScrollTop + viewportHeight) - elementOffsetTop;
-        var percentage = distance / ((viewportHeight + elementHeight) / 100);
+  // initial
+  element.style.backgroundPositionY = percentageSeen()+'%'
 
-        if (percentage < 0) return 0;
-        else if (percentage > 100) return 100;
-        else return percentage;
-      }
-
-      $element.css({ 'background-position-y' : percentageSeen()+'%' });
-
-      $(window).on('scroll', function() {
-        $element.css({ 'background-position-y' : percentageSeen()+'%' });
-      });
-    });
-  };
-
-}(jQuery));
+  // update
+  window.addEventListener('scroll', function(){
+    element.style.backgroundPositionY = percentageSeen()+'%'
+  });
+};

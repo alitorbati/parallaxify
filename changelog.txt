@@ -1,0 +1,6 @@
+2.0:
+  - remove jQuery dependency
+  - introduces non-backwards-compatible changes
+
+1.0:
+  - it works
