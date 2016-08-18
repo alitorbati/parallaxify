@@ -1,3 +1,7 @@
+2.1:
+  - support multiple instances of a given class
+  - use ES6
+
 2.0:
   - remove jQuery dependency
   - introduces non-backwards-compatible changes
