@@ -1,3 +1,7 @@
+2.2:
+  - only update background-position when it has changed
+  - only calculate window stuff when resized
+
 2.1:
   - support multiple instances of a given class
   - use ES6
