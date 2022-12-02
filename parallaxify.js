@@ -17,7 +17,3 @@ function parallaxify(selector) {
     });
   }
 }
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  parallaxify(".header-image");
-});
