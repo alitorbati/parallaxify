@@ -4,13 +4,15 @@ A zero-dependency, super-lightweight JavaScript snippet to add a subtle parallax
 
 ![Demo](demo.gif)
 
-## HTML
+## Usage
+
+### HTML
 
 ```html
 <script src="parallaxify.js"></script>
 ```
 
-## JavaScript
+### JavaScript
 
 ```js
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 ```
 
-## CSS
+### CSS
 
 ```css
 .some-class {
