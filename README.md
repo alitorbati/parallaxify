@@ -1,8 +1,6 @@
 # parallaxify
 
-A zero-dependency, super-lightweight JavaScript snippet to add a subtle parallax effect to background-images
-
-![Demo](demo.gif)
+A zero-dependency, super-lightweight JavaScript snippet to add a subtle parallax effect to background-images on scroll.
 
 ## Usage
 
